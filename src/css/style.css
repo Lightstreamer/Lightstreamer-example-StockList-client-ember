@@ -1,0 +1,101 @@
+/*
+  Copyright 2014 Weswit Srl
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+#wrap {
+  width: 780px;
+  margin: 0 auto;
+}
+
+#top {
+  height: 240px;
+}
+
+#logo {
+}
+
+#logoEmber {
+  padding-left: 45px;
+  margin-bottom: 20px
+}
+
+#desc {
+  font-family: Helvetica, Arial;
+  font-size: 11pt;
+  margin-bottom: 9px;
+}
+  
+#title  {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 8pt;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 25px;
+  padding-left: 80px;
+}
+
+#logo, #logoEmber, #title {
+  float: left;
+}
+
+.tableTitle {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 10pt;
+  color: #ffffff;
+  background-color: #e14930;
+  font-weight: bold;
+  text-align: left;
+}
+.disc { 
+  margin-top: 5px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 7pt;
+  color: #000000; 
+  background: #ffffff;
+  font-weight: normal; 
+  text-align: left; 
+}
+.stockNameOdd {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 10pt;
+  color: #d73636;
+  background-color: #eeeeee;
+  font-weight: bold;
+  text-align: left;
+}
+.stockNameEven {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 10pt;
+  color: #d73636;
+  background-color: #ff9f8f;
+  font-weight: bold;
+  text-align: left;
+}
+.colOdd {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  background-color: #eeeeee;
+  font-weight: normal;
+  text-align: right;
+}
+.colEven {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  background-color: #ff9f8f;
+  font-weight: normal;
+  text-align: right;
+}
