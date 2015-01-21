@@ -31,7 +31,7 @@ If you want to install a version of this demo pointing to your local Lightstream
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
 * Download this project.
-* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you chose the former case, please create the folders <LS_HOME>/pages/demos/EmberJSDemo
+* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you chose the former case, please create the folders <LS_HOME>/pages/demos/EmberDemo
 then copy there the contents of the `/src` folder of this project. The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
 If you need to target a different Lightstreamer server, please search this line:
 ```js
