@@ -6,7 +6,7 @@ A simple stocklist demo application showing integration between the [Ember.js](h
 
 ## Live Demo
 
-[![screenshot](screen_ember_large.png)](http://demos.lightstreamer.com/EmberJSDemo)<br>
+[![screenshot](screen_ember_large.png)](http://demos.lightstreamer.com/EmberDemo)<br>
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/EmberDemo)<br>
 
 ## Details
