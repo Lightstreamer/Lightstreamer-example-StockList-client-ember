@@ -16,12 +16,12 @@
 
 // Create an Ember Application.
 var StockListDemoApp = Ember.Application.create({
-	  LOG_TRANSITIONS: true,
-	  LOG_BINDINGS: true,
-	  LOG_VIEW_LOOKUPS: true,
-	  LOG_STACKTRACE_ON_DEPRECATION: true,
-	  LOG_VERSION: true,
-	  debugMode: true
+  LOG_TRANSITIONS: true,
+  LOG_BINDINGS: true,
+  LOG_VIEW_LOOKUPS: true,
+  LOG_STACKTRACE_ON_DEPRECATION: true,
+  LOG_VERSION: true,
+  debugMode: true
 });
 
 // Use the local storage adapter to persist the model.
@@ -63,39 +63,39 @@ StockListDemoApp.StockRoute = Ember.Route.extend({
   activate: function() {
     store = this.store;
     require(["js/lsClient", "Subscription"], function(lsClient, Subscription) {
-	  
+      
 	  var stockSubscription = new Subscription("MERGE", 
-		["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10"], 
-		["stock_name", "last_price", "time", "pct_change", "bid_quantity", "bid", "ask", "ask_quantity", "min", "max", "ref_price", "open_price"]
-	  );
-	
-	  stockSubscription.setDataAdapter('QUOTE_ADAPTER');
-	  stockSubscription.setRequestedSnapshot("yes");
-	  stockSubscription.addListener({
-		onItemUpdate: function(info) {
-		  var i = info.getItemPos();
-		  if (!store.hasRecordForId('stockItem', i)) {
-			// Push an empty record, with only the primary key
-			store.push('stockItem', { id: i});
-		  }
-		  
-		  store.find('stockItem', i).then(function(stockItem) {
-			info.forEachChangedField(function(fieldName, fieldPos, value) {
-			  // Set field value on the stocItem locally-persisted instance
-		      stockItem.set(fieldName, value)
-			});
-			// Commit the changes on the local store
-		    stockItem.save();
-		  });
+        ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10"],
+        ["stock_name", "last_price", "time", "pct_change", "bid_quantity", "bid", "ask", "ask_quantity", "min", "max", "ref_price", "open_price"]
+      );
+
+      stockSubscription.setDataAdapter('QUOTE_ADAPTER');
+      stockSubscription.setRequestedSnapshot("yes");
+      stockSubscription.addListener({
+        onItemUpdate: function(info) {
+          var i = info.getItemPos();
+          if (!store.hasRecordForId('stockItem', i)) {
+            // Push an empty record, with only the primary key
+            store.push('stockItem', { id: i});
+          }
+
+          store.find('stockItem', i).then(function(stockItem) {
+            info.forEachChangedField(function(fieldName, fieldPos, value) {
+              // Set field value on the stocItem locally-persisted instance
+              stockItem.set(fieldName, value)
+            });
+            // Commit the changes on the local store
+            stockItem.save();
+          });
 		},
 	  });
-	  
-	  lsClient.subscribe(stockSubscription);		  
-	});
+
+      lsClient.subscribe(stockSubscription);
+    });
   },
 	  
   model: function() {
-	// The model is provided by retrieving al stored stockItems
+    // The model is provided by retrieving al stored stockItems
     return this.store.findAll('stockItem');
   },
 });
