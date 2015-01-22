@@ -74,29 +74,20 @@ StockListDemoApp.StockRoute = Ember.Route.extend({
 	  stockSubscription.addListener({
 		onItemUpdate: function(info) {
 		  var i = info.getItemPos();
-		  if (store.hasRecordForId('stockItem', i)) {
-		    var self = this;
-			store.find('stockItem', i).then(function(stockItem) {
-			  self.populate(info, stockItem);
-			});	
-		  } else {
-		    // Create an empty record, with only the primary key
-			var stockItem = store.createRecord('stockItem', { id: i});
-			
-			// Populate the newly created record with data coming from the server
-			this.populate(info, stockItem);
+		  if (!store.hasRecordForId('stockItem', i)) {
+			// Push an empty record, with only the primary key
+			store.push('stockItem', { id: i});
 		  }
-		},
-
-		populate: function(info, stockItem) {
-		  info.forEachChangedField(function(fieldName, fieldPos, value) {
-			// Set field value on the stocItem locally-persisted instance
-		    stockItem.set(fieldName, value)
-		  });
 		  
-		  // Commit the changes on the local store
-		  stockItem.save();
-		}
+		  store.find('stockItem', i).then(function(stockItem) {
+			info.forEachChangedField(function(fieldName, fieldPos, value) {
+			  // Set field value on the stocItem locally-persisted instance
+		      stockItem.set(fieldName, value)
+			});
+			// Commit the changes on the local store
+		    stockItem.save();
+		  });
+		},
 	  });
 	  
 	  lsClient.subscribe(stockSubscription);		  
