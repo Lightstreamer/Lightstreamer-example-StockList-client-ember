@@ -29,9 +29,9 @@ StockListDemoApp.ApplicationAdapter = DS.LSAdapter.extend({
   namespace: 'stock-list'
 });
 
-// Define the "stock" route, mapped to "/" path.
+// Define the "stock" resource, mapped to "/" path.
 StockListDemoApp.Router.map(function() {
-  this.route("stock", { path : "/" } );
+  this.resource("stock", { path : "/" } );
 });
 	
 // Create the StockItem class: its fields reflect the fields name of the subscribed items.
