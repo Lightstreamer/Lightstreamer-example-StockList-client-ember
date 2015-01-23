@@ -81,7 +81,7 @@ StockListDemoApp.StockRoute = Ember.Route.extend({
 
           store.find('stockItem', i).then(function(stockItem) {
             info.forEachChangedField(function(fieldName, fieldPos, value) {
-              // Set field value on the stocItem locally-persisted instance
+              // Set field value on the stockItem locally-persisted instance
               stockItem.set(fieldName, value)
             });
             // Commit the changes on the local store
@@ -90,12 +90,13 @@ StockListDemoApp.StockRoute = Ember.Route.extend({
 		},
 	  });
 
+      // Register the subscription	  
       lsClient.subscribe(stockSubscription);
     });
   },
 	  
   model: function() {
-    // The model is provided by retrieving al stored stockItems
+    // The model is provided by retrieving all the stored stockItems
     return this.store.findAll('stockItem');
   },
 });
