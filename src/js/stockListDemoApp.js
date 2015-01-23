@@ -24,11 +24,6 @@ var StockListDemoApp = Ember.Application.create({
   debugMode: true
 });
 
-// Use the local storage adapter to persist the model.
-StockListDemoApp.ApplicationAdapter = DS.LSAdapter.extend({
-  namespace: 'stock-list'
-});
-
 // Define the "stock" resource, mapped to "/" path.
 StockListDemoApp.Router.map(function() {
   this.resource("stock", { path : "/" } );
@@ -54,6 +49,11 @@ StockListDemoApp.StockItem = DS.Model.extend({
   isOdd: function() {
     return this.get("id") % 2 == 0;
   }.property('id')
+});
+
+// Use the local storage adapter to persist the model.
+StockListDemoApp.ApplicationAdapter = DS.LSAdapter.extend({
+  namespace: 'stock-list'
 });
 
 // Define the StockRoute object	
