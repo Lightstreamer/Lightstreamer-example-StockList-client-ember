@@ -87,7 +87,7 @@ StockListDemoApp.StockRoute = Ember.Route.extend({
             // Commit the changes on the local store
             stockItem.save();
           });
-		},
+        },
 	  });
 
       // Register the subscription	  
