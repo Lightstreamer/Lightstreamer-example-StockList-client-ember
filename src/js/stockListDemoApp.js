@@ -56,7 +56,7 @@ StockListDemoApp.ApplicationAdapter = DS.LSAdapter.extend({
   namespace: 'stock-list'
 });
 
-// Define the StockRoute object	
+// Define the StockRoute
 StockListDemoApp.StockRoute = Ember.Route.extend({
 
   // Initialization code
