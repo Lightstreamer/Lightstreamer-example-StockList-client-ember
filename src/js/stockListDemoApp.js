@@ -29,7 +29,7 @@ StockListDemoApp.Router.map(function() {
   this.resource("stock", { path : "/" } );
 });
 	
-// Create the StockItem class: its fields reflect the fields name of the subscribed items.
+// Create the StockItem class: its attributes map to the fields name of the subscribed items.
 // In this way we realize a one-to-one mapping between EmberJS Data Model and Lighstreamer fields schema.
 StockListDemoApp.StockItem = DS.Model.extend({
   stock_name: DS.attr(),
