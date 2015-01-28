@@ -22,7 +22,7 @@ Finally, changes applied to the model will be automatically reflected by the fra
 The demo includes the following client-side functionalities:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 10 items, subscribed to in **MERGE** mode.
 
-In the blog post "A Simple Ember.js Demo for Lightstreamer" you can find a more in depth discussion about the integration between Ember.js and Lightstreamer.
+In the blog post ["A Simple Ember.js Demo for Lightstreamer"](http://blog.lightstreamer.com/2015/01/a-simple-emberjs-demo-for-lightstreamer.html) you can find a more in depth discussion about the integration between Ember.js and Lightstreamer.
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-ember -->
 
 ## Install
