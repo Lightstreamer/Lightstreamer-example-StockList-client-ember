@@ -32,6 +32,7 @@ If you want to install a version of this demo pointing to your local Lightstream
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
 * Download this project.
+* Get the `lightstreamer.min.js` file from [npm](https://www.npmjs.com/package/lightstreamer-client-web) or [unpkg](https://unpkg.com/lightstreamer-client-web/lightstreamer.min.js) and put it in the `src/js` folder.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you chose the former case, please create the folders <LS_HOME>/pages/demos/EmberDemo
 then copy there the contents of the `/src` folder of this project. The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
 If you need to target a different Lightstreamer server, please search this line:
@@ -39,7 +40,7 @@ If you need to target a different Lightstreamer server, please search this line:
 var lsClient = new LightstreamerClient(protocolToUse + "//localhost:8080", "DEMO");
 ```
 in `lsClient.js` and change it accordingly.
-* Lightstreamer JS client, RequireJS, Ember.js (and all its dependencies) are currently hot-linked in the HTML page: you may want to replace them with a local version and/or upgrade ther version
+* RequireJS, Ember.js (and all its dependencies) are currently hot-linked in the HTML page: you may want to replace them with a local version and/or upgrade ther version
 
 The demo is now ready to be launched.
 
@@ -58,4 +59,4 @@ The demo is now ready to be launched.
 
 ## Lightstreamer Compatibility Notes
 
-- Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
+- Compatible with Lightstreamer JavaScript Client library version 6.0 or newer (installation instructions for version 8.0 or newer).
