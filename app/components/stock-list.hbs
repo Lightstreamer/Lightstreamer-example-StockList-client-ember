@@ -1,0 +1,37 @@
+<table class="table">
+  <thead>
+    <tr class="tableTitle">
+      <td>Name</td>
+      <td>Last</td>
+      <td>Time</td>
+      <td>Change</td>
+      <td>Bid Size</td>
+      <td>Bid</td>
+      <td>Ask</td>
+      <td>Ask Size</td>
+      <td>Min</td>
+      <td>Max</td>
+      <td>Ref.</td>
+      <td>Open</td>
+    </tr>
+  </thead>
+
+  <tbody>
+  {{#each this.rows as |item|}}
+    <tr class={{if item.isOdd "colOdd" "colEven"}}>
+      <td><div class={{if item.isOdd "stockNameOdd" "stockNameEven"}}>{{item.stock_name}}</div></td>
+      <td>{{item.last_price}}</td>
+      <td>{{item.time}}</td>
+      <td>{{item.pct_change}}</td>
+      <td>{{item.bid_quantity}}</td>
+      <td>{{item.bid}}</td>
+      <td>{{item.ask}}</td>
+      <td>{{item.ask_quantity}}</td>
+      <td>{{item.min}}</td>
+      <td>{{item.max}}</td>
+      <td>{{item.ref_price}}</td>
+      <td>{{item.open_price}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

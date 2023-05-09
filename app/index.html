@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lightstreamer :: Ember.js :: Stock-List Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-demo3.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    <div class="ribbon">
+      <a href="https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-ember">Fork me on GitHub</a>
+    </div>
+    <div id="wrap">
+      
+      <div class="banner">
+        <a href="https://emberjs.com" target="_blank"><img 
+          src="images/logo_ember.png" alt="Ember.js" style="width: 100px;"/></a>
+        <a href="https://www.lightstreamer.com">
+          <img src="images/logo.png" alt="Logo" class="logo">
+        </a>
+        <p>
+          Ember.js<br>Basic Stock-List Demo
+        </p>
+      </div>
+
+      <div id="content">
+        <div class="desc">
+          This demo shows the integration between Lightstreamer JavaScript Client library and Ember.js.<br/>
+          <br/>
+          To learn more visit the <a href="https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-ember">project page on github</a>
+          and explore the source code of the application.
+        </div>
+
+        {{content-for "body"}}
+        <script src="{{rootURL}}assets/vendor.js"></script>
+        <script src="{{rootURL}}assets/ember-demo3.js"></script>
+    
+        {{content-for "body-footer"}}
+      </div>
+    </div>
+    
+  </body>
+</html>
