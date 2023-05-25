@@ -76,6 +76,6 @@
     "edition": "octane"
   },
   "dependencies": {
-    "lightstreamer-client-web": "^9.0.0-beta.3"
+    "lightstreamer-client-web": "^9.0.0-beta.4"
   }
 }
